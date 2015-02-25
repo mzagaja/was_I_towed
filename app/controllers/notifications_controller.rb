@@ -9,6 +9,7 @@ class NotificationsController < ApplicationController
   end
 
   def receive
+    client = Twilio::REST::Client.new Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_auth_token
     vehicle_plate = params["Body"]
     from_number = params["From"]
     base_url = 'https://data.hartford.gov/resource/hefc-wgp8.json?$where=vehicle_plate%20=%20\''
