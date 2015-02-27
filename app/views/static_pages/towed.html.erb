@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="large-10 columns">
 		<h1><%= @body %></h1>
-		<p>It was towed from <%= @car["tow_from_address"].titleize %>. It is now at <%= @car["tow_firm_address"].titleize %> which you can call at <%= @car["tow_firm_phone"] %>.</p>
+		<p>It was towed from <%= @car.first["tow_from_address"].titleize %>. It is now at <%= @car.first["tow_firm_address"].titleize %> which you can call at <%= @car.first["tow_firm_phone"] %>.</p>
 	</div>
 </div>
