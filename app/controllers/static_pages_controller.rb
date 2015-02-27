@@ -13,6 +13,7 @@ class StaticPagesController < ApplicationController
       @body = "No, keep looking."
     else
       @body = "Shit, yes it was."
+      @car = car.first
     end
   end
 end
