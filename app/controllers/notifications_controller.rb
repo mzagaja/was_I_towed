@@ -18,12 +18,12 @@ class NotificationsController < ApplicationController
       response = Twilio::TwiML::Response.new do |r|
         r.Message 'No, keep looking.'
       end.text
-      render plain: response.status
+      render xml: response
     else
       response = Twilio::TwiML::Response.new do |r|
         r.Message 'Shit yes it was.'
       end.text
-      render plain: response.status
+      render xml: response
     end
   end
 end
