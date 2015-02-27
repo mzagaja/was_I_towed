@@ -2,7 +2,7 @@
 	<div class="large-10 columns">
 		<h2>Did Hartford Tow My Car?</h2>
 		<%= form_tag('static_pages/towed', method: "get") do %>
-		  <%= text_field_tag(:q, placeholder: "License Plate (no spaces)") %>
+		  <%= text_field_tag(:q, nil, placeholder: "License Plate (No spaces)") %>
 		  <%= submit_tag("Search", class: "button") %>
 		<% end %>
 	</div>
