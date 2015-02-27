@@ -1,7 +1,9 @@
-<h2>Did Hartford Tow My Car?</h2>
-
-<%= form_tag('static_pages/towed', method: "get") do %>
-  <%= label_tag(:q, "License Plate (no spaces):") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search", class: "button", placeholder: "License Plate (no spaces)") %>
-<% end %>
+<div class="row">
+	<div class="large-10 columns">
+		<h2>Did Hartford Tow My Car?</h2>
+		<%= form_tag('static_pages/towed', method: "get") do %>
+		  <%= text_field_tag(:q, placeholder: "License Plate (no spaces)") %>
+		  <%= submit_tag("Search", class: "button") %>
+		<% end %>
+	</div>
+</div>
