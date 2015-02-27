@@ -21,7 +21,7 @@ class NotificationsController < ApplicationController
       render xml: response
     else
       response = Twilio::TwiML::Response.new do |r|
-        r.Message 'Shit yes it was.'
+        r.Message 'Shit, yes it was. It is now at ' + car.first["tow_firm_address"] + ' which can be called at ' + car.first["tow_firm_phone"] + "."
       end.text
       render xml: response
     end
