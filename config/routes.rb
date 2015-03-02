@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  resources :users
+
   get 'static_pages/towed'
 
   get 'static_pages/home'
-
-  resources :users
   root 'static_pages#home'
 
   post 'twilio/voice' => 'twilio#voice'
