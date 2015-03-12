@@ -4,5 +4,5 @@ class User < ActiveRecord::Base
   validates :vehicle_license, presence: true, length: { maximum: 8 }
   validates :telephone_number, length: { maximum: 10 }, uniqueness: true
   validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }, uniqueness: { case_sensitive: false }
-  has_secure_password
+  has_secure_password validations: false
 end
