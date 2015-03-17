@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  TowNum: 1
+  Tow_Firm: MyString
+  Tow_Firm_Address: MyString
+  Tow_Firm_Phone: MyString
+  Vehicle_State: MyString
+  Vehicle_Year: MyString
+  Make: MyString
+  Model: MyString
+  Color: MyString
+  Tow_From_Address: MyString
+  Date: 2015-03-13
+  Time: 2015-03-13 18:33:38
+  geom: MyString
+
+two:
+  TowNum: 1
+  Tow_Firm: MyString
+  Tow_Firm_Address: MyString
+  Tow_Firm_Phone: MyString
+  Vehicle_State: MyString
+  Vehicle_Year: MyString
+  Make: MyString
+  Model: MyString
+  Color: MyString
+  Tow_From_Address: MyString
+  Date: 2015-03-13
+  Time: 2015-03-13 18:33:38
+  geom: MyString
