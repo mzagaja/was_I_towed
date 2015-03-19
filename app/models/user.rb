@@ -1,8 +1,20 @@
 class User < ActiveRecord::Base
+  attr_accessor :remember_token
   before_save { self.email = email.downcase }
   validates :name, length: { maximum: 200 }
   validates :vehicle_license, presence: true, length: { maximum: 8 }
   validates :telephone_number, length: { maximum: 10 }, uniqueness: true
   validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }, uniqueness: { case_sensitive: false }
-  has_secure_password validations: false
+  has_secure_password # validations: false Remove this line later
+
+  # Returns a random token.
+  def User.new_token
+    SecureRandom.urlsafe_base64
+  end
+
+  # Remembers a user in the database for use in persistent sessions.
+  def remember
+    self.remember_token = User.new_token
+    update_attribute(:remember_digest, User.digest(remember_token))
+  end
 end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   resources :users
 
   get 'static_pages/towed'
@@ -9,6 +11,11 @@ Rails.application.routes.draw do
   post 'twilio/voice' => 'twilio#voice'
   post 'notifications/notify' => 'notifications#notify'
   post 'notifications/receive' => 'notifications#receive'
+
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+  get 'signup' => 'users#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
