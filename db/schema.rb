@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150318204707) do
+ActiveRecord::Schema.define(version: 20150331190721) do
 
   create_table "tows", force: :cascade do |t|
     t.integer  "TowNum"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20150318204707) do
     t.string   "geom"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.datetime "removed_at"
   end
 
   create_table "users", force: :cascade do |t|

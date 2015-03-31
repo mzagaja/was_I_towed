@@ -1,9 +1,9 @@
 namespace :updatedb do
   desc "Populate newest tows from API"
   task updatetows: :environment do
-    today = "03012015"
-    base_url = 'https://data.hartford.gov/resource/hefc-wgp8.json?Date='
-    full_url = base_url + today
+    last_tow = Tow.last["TowNum"]
+    base_url = 'https://data.hartford.gov/resource/hefc-wgp8.json?$where=townum%20>%20'
+    full_url = base_url + "\'" + last_tow.to_s + "\'"
     todays_tows = JSON.parse(open(full_url).read)
     todays_tows.each do |x|
       t = Tow.new
@@ -19,10 +19,25 @@ namespace :updatedb do
       t.Tow_From_Address = x["tow_from_address"].squish!
       t.Date = Date.strptime(x["date"], '%m%d%Y')
       t.Time = Time.strptime(x["date"]+x["time"], '%m%d%Y%H%M')
-      t.geom = x["geom"]["longitude"] + "," + x["geom"]["latitude"]
+      t.geom = x["geom"]["longitude"] + "," + x["geom"]["latitude"] if x["geom"]
       t.save
     end
   end
+
+  desc "Check for cars picked up by owner."
+  task removetows: :environment do
+    base_url = 'https://data.hartford.gov/resource/hefc-wgp8.json?$select=townum'
+    website_tows_array = JSON.parse(open(base_url).read)
+    current_tows = Array.new
+    website_tows_array.each { |i| current_tows << i["townum"].to_i }
+    Tow.where(removed_at: nil).find_each do |tow|
+      unless current_tows.include?(tow.TowNum)
+        tow.removed_at = Time.now 
+        tow.save
+      end
+    end
+  end
+
   desc "Test Dates"
   task testdates: :environment do
     today = "03012015"
