@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150331190721) do
+ActiveRecord::Schema.define(version: 20150401005355) do
 
   create_table "tows", force: :cascade do |t|
     t.integer  "TowNum"
@@ -27,10 +27,13 @@ ActiveRecord::Schema.define(version: 20150331190721) do
     t.date     "Date"
     t.time     "Time"
     t.string   "geom"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.datetime "removed_at"
+    t.string   "Vehicle_Plate",    limit: 10
   end
+
+  add_index "tows", ["Vehicle_Plate"], name: "index_tows_on_Vehicle_Plate"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
