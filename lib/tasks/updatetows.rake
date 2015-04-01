@@ -1,9 +1,10 @@
 namespace :updatedb do
   desc "Populate newest tows from API"
   task updatetows: :environment do
-    last_tow = Tow.last["TowNum"]
+    last_tow = Tow.last["TowNum"] if Tow.last
+    last_tow ||= 305800
     base_url = 'https://data.hartford.gov/resource/hefc-wgp8.json?$where=townum%20>%20'
-    full_url = base_url + "\'" + last_tow.to_s + "\'"
+    full_url = base_url + "\'" + last_tow.to_s + "\'" + "&$limit=5000"
     todays_tows = JSON.parse(open(full_url).read)
     todays_tows.each do |x|
       t = Tow.new
@@ -26,7 +27,7 @@ namespace :updatedb do
 
   desc "Check for cars picked up by owner."
   task removetows: :environment do
-    base_url = 'https://data.hartford.gov/resource/hefc-wgp8.json?$select=townum'
+    base_url = 'https://data.hartford.gov/resource/hefc-wgp8.json?$select=townum&$limit=5000'
     website_tows_array = JSON.parse(open(base_url).read)
     current_tows = Array.new
     website_tows_array.each { |i| current_tows << i["townum"].to_i }
