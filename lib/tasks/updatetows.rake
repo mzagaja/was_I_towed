@@ -13,6 +13,7 @@ namespace :updatedb do
       t.Tow_Firm_Address = x["tow_firm_address"]
       t.Tow_Firm_Phone = x["tow_firm_phone"]
       t.Vehicle_State = x["vehicle_state"]
+      t.Vehicle_Plate = x["vehicle_plate"]
       t.Vehicle_Year = x["vehicle_year"]
       t.Make = x["make"]
       t.Model = x["model"]
