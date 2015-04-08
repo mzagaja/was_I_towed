@@ -1,9 +1,5 @@
-<div class="row">
-	<div class="small-10 columns">
-		<h1><%= @body %></h1>
-		<%= render 'tow_location' if @car %>
-		<% unless logged_in? %>
-			<%= link_to "Click to Text or E-Mail Me if My Car is Towed", signup_path, class: "button expand" %>
-		<% end %>
-	</div>
-</div>
+<h1><%= @body %></h1>
+<%= render 'tow_location' if @car %>
+<% unless logged_in? %>
+	<%= link_to "Click to Text or E-Mail Me if My Car is Towed", signup_path, class: "button expand" %>
+<% end %>

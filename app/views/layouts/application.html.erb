@@ -14,8 +14,9 @@
 
   <body>
     <div class="row">
-      <%= yield %>
-      <%= debug(params) if Rails.env.development? %>
+      <div class="small-10 small-centered columns">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
