@@ -12,8 +12,8 @@
 		</ul>
 	</section>
 </nav>
-<h1>Did Hartford Tow My Car?</h1>
+<h1>Was I towed?</h1>
 <%= form_tag('static_pages/towed', method: "get") do %>
 	<%= text_field_tag(:q, nil, placeholder: "License Plate (No spaces)") %>
-	<%= submit_tag("Search", class: "button expand") %>
+	<%= submit_tag("Click to find out!", class: "button expand") %>
 <% end %>
