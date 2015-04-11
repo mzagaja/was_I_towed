@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   validates :telephone_number, length: { maximum: 10 }, uniqueness: true
   validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }, uniqueness: { case_sensitive: false }
   has_secure_password # validations: false Remove this line later
+  has_many :tows, foreign_key: "Vehicle_Plate", primary_key: "vehicle_license"
 
   # Returns a random token.
   def User.new_token
@@ -31,5 +32,9 @@ class User < ActiveRecord::Base
 
   def forget
     update_attribute(:remember_digest, nil)
+  end
+
+  def matthew
+    puts "test"
   end
 end
