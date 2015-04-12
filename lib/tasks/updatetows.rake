@@ -29,7 +29,7 @@ namespace :updatedb do
   desc "Compare the tows to the users, and send appropriate alerts."
   task compare: :environment do
     User.joins(:tows).each do |user|
-      user.alert("it worked")
+      user.sms_alert("it worked")
     end
   end
 
