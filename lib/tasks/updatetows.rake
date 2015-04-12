@@ -26,6 +26,13 @@ namespace :updatedb do
     end
   end
 
+  desc "Compare the tows to the users, and send appropriate alerts."
+  task compare :environment do
+    User.joins(:tows).each do |user|
+      user.alert("it worked")
+    end
+  end
+
   desc "Check for cars picked up by owner."
   task removetows: :environment do
     base_url = 'https://data.hartford.gov/resource/hefc-wgp8.json?$select=townum&$limit=5000'
