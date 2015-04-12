@@ -27,7 +27,7 @@ namespace :updatedb do
   end
 
   desc "Compare the tows to the users, and send appropriate alerts."
-  task compare :environment do
+  task compare: :environment do
     User.joins(:tows).each do |user|
       user.alert("it worked")
     end
