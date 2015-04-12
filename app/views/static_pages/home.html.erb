@@ -14,6 +14,6 @@
 </nav>
 <h1>Was I towed?</h1>
 <%= form_tag('static_pages/towed', method: "get") do %>
-	<%= text_field_tag(:q, nil, placeholder: "License Plate (No spaces)") %>
+	<%= text_field_tag(:q, nil, placeholder: "License Plate") %>
 	<%= submit_tag("Click to find out!", class: "button expand") %>
 <% end %>

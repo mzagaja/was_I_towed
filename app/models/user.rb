@@ -1,9 +1,11 @@
 class User < ActiveRecord::Base
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
+  before_validation { self.vehicle_license = vehicle_license.gsub(/[^A-Za-z0-9]/, "") }
+  before_validation { self.telephone_number = telephone_number.gsub(/[^0-9]/, "") }
   validates :name, length: { maximum: 200 }
   validates :vehicle_license, presence: true, length: { maximum: 8 }
-  validates :telephone_number, length: { maximum: 10 }, uniqueness: true
+  validates :telephone_number, length: { is: 10 }, uniqueness: true
   validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }, uniqueness: { case_sensitive: false }
   has_secure_password # validations: false Remove this line later
   has_many :tows, foreign_key: "Vehicle_Plate", primary_key: "vehicle_license"
