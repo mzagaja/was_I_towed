@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150409010629) do
+ActiveRecord::Schema.define(version: 20150412205643) do
 
   create_table "tows", force: :cascade do |t|
     t.integer  "TowNum"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20150409010629) do
     t.string   "password_digest"
     t.string   "remember_digest"
     t.boolean  "admin",            default: false
+    t.string   "state"
   end
 
 end
