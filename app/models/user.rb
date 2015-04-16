@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :activation_token
   before_save { self.email = email.downcase }
+  before_create :create_activation_digest
   before_validation { self.vehicle_license = vehicle_license.gsub(/[^A-Za-z0-9]/, "") }
   before_validation { self.telephone_number = telephone_number.gsub(/[^0-9]/, "") }
   validates :name, length: { maximum: 200 }
@@ -21,9 +22,10 @@ class User < ActiveRecord::Base
     update_attribute(:remember_digest, User.digest(remember_token))
   end
 
-  def authenticated?(remember_token)
-    return false if remember_digest.nil?
-    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  def authenticated?(attribute, token)
+    digest = send("#{attribute}_digest")
+    return false if digest.nil?
+    BCrypt::Password.new(digest).is_password?(token)
   end
 
   def User.digest(string)
@@ -40,4 +42,19 @@ class User < ActiveRecord::Base
     client = Twilio::REST::Client.new Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_auth_token
     message = client.messages.create from: '8607856371', to: self.telephone_number, body: text
   end
+
+  def activate
+    update_attribute(:activated, true)
+    update_attribute(:activated_at, Time.zone.now)
+  end
+
+  def send_activation_email
+    UserMailer.account_activation(self).deliver_now
+  end
+
+  private
+    def create_activation_digest
+      self.activation_token = User.new_token
+      self.activation_digest = User.digest(activation_token)
+    end
 end

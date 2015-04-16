@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150412205643) do
+ActiveRecord::Schema.define(version: 20150416002401) do
 
   create_table "tows", force: :cascade do |t|
     t.integer  "TowNum"
@@ -40,12 +40,15 @@ ActiveRecord::Schema.define(version: 20150412205643) do
     t.string   "email"
     t.string   "vehicle_license"
     t.string   "telephone_number"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.string   "password_digest"
     t.string   "remember_digest"
-    t.boolean  "admin",            default: false
+    t.boolean  "admin",             default: false
     t.string   "state"
+    t.string   "activation_digest"
+    t.boolean  "activated",         default: false
+    t.datetime "activated_at"
   end
 
 end
