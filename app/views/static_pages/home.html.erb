@@ -15,3 +15,10 @@
   <%= text_field_tag(:q, nil, placeholder: "License Plate") %>
   <%= submit_tag("Click to find out!", class: "button expand") %>
 <% end %>
+<% unless logged_in? %>
+  <%= link_to "Click to Text or E-Mail Me if My Car is Towed", signup_path, class: "button expand" %>
+<% end %>
+
+<h5>TowedCar.info lets you find out if your car was towed and if so where it is right now. It connects with the database of towed cars. It is exclusively launched in Hartford, Connecticut with more cities coming soon. If you are interested in adding your city <a href="mailto:admin@towedcar.info">e-mail us</a>.</h4>
+
+<p align="center"><small><a href="mailto:admin@towedcar.info">Contact Us</a> | A Matt Zagaja Production</small></p>
