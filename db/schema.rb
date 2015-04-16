@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150416002401) do
+ActiveRecord::Schema.define(version: 20150416025152) do
 
   create_table "tows", force: :cascade do |t|
     t.integer  "TowNum"
@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(version: 20150416002401) do
     t.string   "activation_digest"
     t.boolean  "activated",         default: false
     t.datetime "activated_at"
+    t.string   "reset_digest"
+    t.datetime "reset_sent_at"
   end
 
 end
