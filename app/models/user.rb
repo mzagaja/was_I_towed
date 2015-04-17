@@ -43,6 +43,10 @@ class User < ActiveRecord::Base
     message = client.messages.create from: '8607856371', to: self.telephone_number, body: text
   end
 
+  def send_tow_alert_email
+    UserMailer.tow_alert(self).deliver_now 
+  end
+
   def activate
     update_attribute(:activated, true)
     update_attribute(:activated_at, Time.zone.now)

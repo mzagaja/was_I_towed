@@ -31,6 +31,7 @@ namespace :updatedb do
     User.joins(:tows).preload(:tows).each do |user|
       if user.tows[0].Vehicle_State == user.state
         user.sms_alert("Shit, your car was towed to " + user.tows[0].Tow_Firm.titleize + " which you can call at " + user.tows[0].Tow_Firm_Phone)
+        user.send_tow_alert_email
       end
     end
   end

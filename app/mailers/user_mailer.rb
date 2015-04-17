@@ -19,4 +19,10 @@ class UserMailer < ApplicationMailer
     @user = user
     mail to: user.email, subject: "Password Reset"
   end
+
+  def tow_alert(user)
+    @user = user
+    @tow = user.tows[0]
+    mail to: user.email, subject: "Shit, your car was towed."
+  end
 end
