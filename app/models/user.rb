@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
   end
 
   def send_tow_alert_email
-    UserMailer.tow_alert(self).deliver_now 
+    UserMailer.tow_alert(self, self.tows[0]).deliver_now 
   end
 
   def activate
