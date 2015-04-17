@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150416025152) do
+ActiveRecord::Schema.define(version: 20150417193701) do
 
   create_table "tows", force: :cascade do |t|
     t.integer  "TowNum"
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 20150416025152) do
     t.datetime "activated_at"
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
+    t.boolean  "email_alert",       default: false
+    t.boolean  "sms_alert",         default: false
   end
 
 end

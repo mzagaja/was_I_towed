@@ -87,6 +87,11 @@
     <%= f.password_field :password %>
   </div>
 
+  <div class="field">
+    What kind of alerts do you want? 
+    E-Mail: <%= f.check_box :email_alert %> SMS: <%= f.check_box :sms_alert %>
+  </div>
+
   <div class="actions">
     <%= f.submit class: "button expand" %>
   </div>

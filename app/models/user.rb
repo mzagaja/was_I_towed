@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
     update_attribute(:remember_digest, nil)
   end
 
-  def sms_alert(text)
+  def send_sms_alert(text)
     client = Twilio::REST::Client.new Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_auth_token
     message = client.messages.create from: '8607856371', to: self.telephone_number, body: text
   end
