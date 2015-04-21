@@ -29,7 +29,7 @@ namespace :updatedb do
   desc "Compare the tows to the users, and send appropriate alerts."
   task compare: :environment do
     User.joins(:tows).preload(:tows).each do |user|
-      if user.tows[0].Vehicle_State == user.state
+      if user.tows[0].Vehicle_State == user.state && (user.tows[0].created_at <=> Time.now - 1.hours) == 1
         user.send_sms_alert("Shit, your car was towed to " + user.tows[0].Tow_Firm.titleize + " which you can call at " + user.tows[0].Tow_Firm_Phone) if user.sms_alert
         user.send_tow_alert_email if user.email_alert
       end
