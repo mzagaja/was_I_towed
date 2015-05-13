@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Check out the live version at (TowedCar.info)[https://towedcar.info/]. My articles on this application are available on (TrendCT)[http://trendct.org]:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* (Towed in Hartford? Here’s how open data can send you a text message)[http://trendct.org/2015/04/23/towed-in-hartford-heres-how-open-data-can-send-you-a-text-message/]
+* (Tutorial: How I used Hartford’s open data to build my app)[http://trendct.org/2015/05/08/tutorial-how-i-used-hartfords-open-data-to-build-my-app/]
+* (Tutorial: What to learn to build your first web app)[http://trendct.org/2015/05/01/tutorial-what-to-learn-to-build-your-first-web-app/]
