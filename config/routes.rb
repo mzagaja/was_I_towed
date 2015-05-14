@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'password_resets/new'
-
   get 'password_resets/edit'
 
   get 'sessions/new'
@@ -10,7 +9,6 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
 
   get 'static_pages/towed'
-
   get 'static_pages/home'
   root 'static_pages#home'
 
