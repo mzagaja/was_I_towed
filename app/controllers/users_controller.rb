@@ -33,8 +33,8 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         @user.send_activation_email
-        flash[:info] = "Please check your email to activate your account."
-        format.html { redirect_to root_url }
+        format.html { redirect_to root_url, notice: "Please check your email to activate your account." }
+        format.json { head :no_content }
       else
         flash[:alert] = "Invalid activation link."
         format.html { render :new }

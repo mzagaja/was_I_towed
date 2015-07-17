@@ -7,8 +7,9 @@ class User < ActiveRecord::Base
   validates :name, length: { maximum: 200 }
   validates :vehicle_license, presence: true, length: { maximum: 8 }
   validates :telephone_number, length: { is: 10 }, uniqueness: true
-  validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }, uniqueness: { case_sensitive: false }
+  validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }, uniqueness: { case_sensitive: false }, length: { maximum: 250 }
   has_secure_password # validations: false Remove this line later
+  validates :password, presence: true, length: { minimum: 6 }
   has_many :tows, foreign_key: "Vehicle_Plate", primary_key: "vehicle_license"
 
   # Returns a random token.

@@ -1,0 +1,465 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"User",
+				"UserMailer"
+			],
+			[
+				"rai",
+				"raise_delivery_errors"
+			],
+			[
+				"activation",
+				"activation_token"
+			],
+			[
+				"Vehi",
+				"Vehicle_State"
+			],
+			[
+				"Tow",
+				"Tow_Firm"
+			],
+			[
+				"current",
+				"current_user"
+			],
+			[
+				"calls",
+				"calls_made"
+			],
+			[
+				"qual",
+				"qualifying_data"
+			],
+			[
+				"math",
+				"matched_responses"
+			],
+			[
+				"zagaja_t",
+				"zagaja_test_analytics_file"
+			],
+			[
+				"unqi",
+				"uniqueID"
+			],
+			[
+				"website_tows",
+				"website_tows_array"
+			],
+			[
+				"remov",
+				"removed_at"
+			],
+			[
+				"remember",
+				"remember_digest"
+			],
+			[
+				"cu",
+				"current_user"
+			],
+			[
+				"remem",
+				"remember_token"
+			],
+			[
+				"rememb",
+				"remember_digest"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "Snippet: form",
+		"selected_items":
+		[
+			[
+				"Snippet: form",
+				"Snippet: form_for text_field"
+			],
+			[
+				"Snippet: ",
+				"Snippet: form_tag"
+			],
+			[
+				"package control inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 516.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/mzagaja/GitHub/was_I_towed",
+		"/Users/mzagaja/GitHub/was_I_towed/app",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/static_pages",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/users"
+	],
+	"file_history":
+	[
+		"/Users/mzagaja/GitHub/ezcthr12/Gemfile",
+		"/Users/mzagaja/GitHub/ezcthr12/app/controllers/cthr12s_controller.rb",
+		"/Users/mzagaja/GitHub/ezcthr12/db/migrate/20150514193133_create_cthr12s.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/controllers/static_pages_controller.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/test/models/user_test.rb",
+		"/Users/mzagaja/Dropbox/Code for Conn - public/Potential Companies & Communities to Reach Out to.txt",
+		"/Users/mzagaja/Dropbox/Code for Conn - public/project_ideas.txt",
+		"/Users/mzagaja/GitHub/ML_for_Hackers/09-MDS/chapter09.R",
+		"/Users/mzagaja/GitHub/ML_for_Hackers/10-Recommendations/chapter10.R",
+		"/Users/mzagaja/GitHub/ML_for_Hackers/11-SNA/03_twitter_rec.R",
+		"/Users/mzagaja/GitHub/ML_for_Hackers/11-SNA/01_google_sg.R",
+		"/Users/mzagaja/GitHub/ML_for_Hackers/11-SNA/02_twitter_net.R",
+		"/Users/mzagaja/GitHub/ct_dmv_wait_time/wethersfield.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/.ruby-gemset",
+		"/Users/mzagaja/GitHub/was_I_towed/.ruby-version",
+		"/Users/mzagaja/GitHub/was_I_towed/app/models/tow.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/db/migrate/20150417193701_add_alert_types_to_users.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/mailers/user_mailer.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/user_mailer/tow_alert.txt.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/user_mailer/tow_alert.html.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/helpers/sessions_helper.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/sessions/new.html.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/password_resets/new.html.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/controllers/password_resets_controller.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/static_pages/towed.html.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/users/new.html.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/users/show.html.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/static_pages/home.html.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/config/environments/production.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/controllers/users_controller.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/user_mailer/password_reset.html.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/db/migrate/20150409010629_add_admin_to_users.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/controllers/application_controller.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/controllers/notifications_controller.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/controllers/sessions_controller.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/Gemfile",
+		"/Users/mzagaja/GitHub/was_I_towed/Capfile",
+		"/Users/mzagaja/GitHub/was_I_towed/app/controllers/twilio_controller.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/users/_form.html.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/layouts/application.html.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/user_mailer/password_reset.text.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/users/edit.html.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/users/index.html.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/config/routes.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/db/migrate/20150416002401_add_activation_to_users.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/controllers/account_activations_controller.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/user_mailer/account_activation.text.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/user_mailer/account_activation.html.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/config/environments/development.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/test/mailers/previews/user_mailer_preview.rb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/password_resets/edit.html.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/views/layouts/mailer.html.erb",
+		"/Users/mzagaja/GitHub/was_I_towed/app/mailers/application_mailer.rb",
+		"/Users/mzagaja/Library/Application Support/Sublime Text 3/Packages/User/Ruby.sublime-settings",
+		"/Users/mzagaja/Library/Application Support/Sublime Text 3/Packages/User/HTML (Rails).sublime-settings",
+		"/Users/mzagaja/GitHub/was_I_towed/config/deploy/production.rb",
+		"/Users/mzagaja/GitHub/blue_labs_exam/race_comparison_data_analysis_export.sql",
+		"/Users/mzagaja/GitHub/blue_labs_exam/combined_data_analysis_export.sql",
+		"/Users/mzagaja/GitHub/blue_labs_exam/topline_analysis.sql",
+		"/Users/mzagaja/GitHub/blue_labs_exam/survey_data_quality_check.sql",
+		"/Users/mzagaja/GitHub/blue_labs_exam/caller_level_quality_analysis.sql",
+		"/Users/mzagaja/GitHub/blue_labs_exam/quality_check.sql",
+		"/Users/mzagaja/GitHub/blue_labs_exam/load_data.sql",
+		"/Users/mzagaja/GitHub/blue_labs_exam/concatonated_sql_FINAL.sql",
+		"/Users/mzagaja/GitHub/ML_for_Hackers/01-Introduction/ufo_sightings.R",
+		"/Users/mzagaja/GitHub/was_I_towed/db/migrate/20150318204707_add_remember_digest_to_users.rb",
+		"/Users/mzagaja/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"sms_alert",
+			"	",
+			"\\t",
+			"root",
+			"correct_user",
+			"User.digest",
+			"current_user",
+			"warning",
+			"alert",
+			"warning",
+			"flash",
+			"current_tows"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 102.0
+	},
+	"pinned_build_system": "",
+	"project": "was_I_towed.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mime",
+				"config/initializers/mime_types.rb"
+			],
+			[
+				"routes.rb",
+				"config/routes.rb"
+			],
+			[
+				"user_mailer.rb",
+				"app/mailers/user_mailer.rb"
+			],
+			[
+				"user.rb",
+				"app/models/user.rb"
+			],
+			[
+				"production.rb",
+				"config/environments/production.rb"
+			],
+			[
+				"account_activation.html.erb",
+				"app/views/user_mailer/account_activation.html.erb"
+			],
+			[
+				"config/environments/production.rb",
+				"config/environments/production.rb"
+			],
+			[
+				"password",
+				"app/controllers/password_resets_controller.rb"
+			],
+			[
+				"password_resets_controller.rb",
+				"app/controllers/password_resets_controller.rb"
+			],
+			[
+				"user_mailer_preview.rb",
+				"test/mailers/previews/user_mailer_preview.rb"
+			],
+			[
+				"password_reset.html.erb",
+				"app/views/user_mailer/password_reset.html.erb"
+			],
+			[
+				"password_reset.text.erb",
+				"app/views/user_mailer/password_reset.text.erb"
+			],
+			[
+				"new.html.erb",
+				"app/views/sessions/new.html.erb"
+			],
+			[
+				"account_ac",
+				"app/controllers/account_activations_controller.rb"
+			],
+			[
+				"users_controller.rb",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"sessions_controller.rb",
+				"app/controllers/sessions_controller.rb"
+			],
+			[
+				"user_controller.rb",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"account_acti",
+				"app/controllers/account_activations_controller.rb"
+			],
+			[
+				"sessions_helper.rb",
+				"app/helpers/sessions_helper.rb"
+			],
+			[
+				"user_mailer_prev",
+				"test/mailers/previews/user_mailer_preview.rb"
+			],
+			[
+				"development.rb",
+				"config/environments/development.rb"
+			],
+			[
+				"account_activation.text",
+				"app/views/user_mailer/account_activation.text.erb"
+			],
+			[
+				"application_mailer",
+				"app/mailers/application_mailer.rb"
+			],
+			[
+				"account_activation.text.erb",
+				"app/views/user_mailer/account_activation.text.erb"
+			],
+			[
+				"addac",
+				"db/migrate/20150416002401_add_activation_to_users.rb"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"capfile",
+				"Capfile"
+			],
+			[
+				"sessions_helper",
+				"app/helpers/sessions_helper.rb"
+			],
+			[
+				"sessions_controller",
+				"app/controllers/sessions_controller.rb"
+			],
+			[
+				"users_controller",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"sessions",
+				"app/controllers/sessions_controller.rb"
+			],
+			[
+				"session",
+				"app/controllers/sessions_controller.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/GitHub/ezcthr12/ezcthr12.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 267.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

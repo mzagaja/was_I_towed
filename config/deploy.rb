@@ -4,6 +4,7 @@ lock '3.3.5'
 set :application, 'was_i_towed'
 set :repo_url, 'git@github.com:mzagaja/was_I_towed.git'
 set :deploy_user, 'rails'
+set :rvm_ruby_version, '2.2.2@was_i_towed'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
