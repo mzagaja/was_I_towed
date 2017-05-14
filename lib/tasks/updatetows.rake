@@ -20,7 +20,7 @@ namespace :updatedb do
       t.Color = x["color"]
       t.Date = Date.strptime(x["date"], '%m%d%Y')
       t.Time = Time.strptime(x["date"]+x["time"], '%m%d%Y%H%M')
-      t.geom = x["geom"]["longitude"] + "," + x["geom"]["latitude"] if x["geom"]
+      t.geom = x["geom"]['coordinates'][0] + "," + x["geom"]['coordinates'][1] if x["geom"]
       t.save
     end
   end
