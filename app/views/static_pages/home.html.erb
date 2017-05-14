@@ -10,10 +10,11 @@
     </ul>
   </section>
 </nav>
-<h1>Was I towed?</h1>
+<br>
+<%= image_tag('logo_color_large.png') %>
 <%= form_tag('static_pages/towed', method: "get") do %>
-  <%= text_field_tag(:q, nil, placeholder: "License Plate") %>
-  <%= submit_tag("Click to find out!", class: "button expand") %>
+  <%= text_field_tag(:q, nil, placeholder: "License Plate (ABC123)") %>
+  <%= submit_tag("Find my car!", class: "button expand") %>
 <% end %>
 <% unless logged_in? %>
   <%= link_to "Click to Text or E-Mail Me if My Car is Towed", signup_path, class: "button expand" %>
