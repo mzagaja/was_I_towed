@@ -5,7 +5,7 @@ namespace :updatedb do
     last_tow ||= 305800
     base_url = 'https://data.hartford.gov/resource/yu94-4cj5.json?$where=townum%20>%20'
     full_url = base_url + "\'" + last_tow.to_s + "\'" + "&$limit=5000"
-    todays_tows = JSON.parse(open(full_url).read)
+    todays_tows = JSON.parse(Faraday.get(full_url).body)
     todays_tows.each do |x|
       t = Tow.new
       t.TowNum = x["townum"]
@@ -39,7 +39,7 @@ namespace :updatedb do
   desc "Check for cars picked up by owner."
   task removetows: :environment do
     base_url = 'https://data.hartford.gov/resource/hefc-wgp8.json?$select=townum&$limit=5000'
-    website_tows_array = JSON.parse(open(base_url).read)
+    website_tows_array = JSON.parse(Faraday.get(base_url).body)
     current_tows = Array.new
     website_tows_array.each { |i| current_tows << i["townum"].to_i }
     Tow.where(removed_at: nil).find_each do |tow|
@@ -55,7 +55,7 @@ namespace :updatedb do
     today = "03012015"
     base_url = 'https://data.hartford.gov/resource/hefc-wgp8.json?Date='
     full_url = base_url + today
-    todays_tows = JSON.parse(open(full_url).read)
+    todays_tows = JSON.parse(Faraday.get(full_url).body)
     todays_tows.each do |x|
       puts Date.strptime(x["date"], '%m%d%Y')
       puts Time.strptime(x["date"]+x["time"], '%m%d%Y%H%M')
