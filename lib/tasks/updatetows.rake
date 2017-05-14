@@ -3,7 +3,7 @@ namespace :updatedb do
   task updatetows: :environment do
     last_tow = Tow.last["TowNum"] if Tow.last
     last_tow ||= 305800
-    base_url = 'https://data.hartford.gov/resource/hefc-wgp8.json?$where=townum%20>%20'
+    base_url = 'https://data.hartford.gov/resource/yu94-4cj5.json?$where=townum%20>%20'
     full_url = base_url + "\'" + last_tow.to_s + "\'" + "&$limit=5000"
     todays_tows = JSON.parse(open(full_url).read)
     todays_tows.each do |x|
@@ -44,7 +44,7 @@ namespace :updatedb do
     website_tows_array.each { |i| current_tows << i["townum"].to_i }
     Tow.where(removed_at: nil).find_each do |tow|
       unless current_tows.include?(tow.TowNum)
-        tow.removed_at = Time.now 
+        tow.removed_at = Time.now
         tow.save
       end
     end
