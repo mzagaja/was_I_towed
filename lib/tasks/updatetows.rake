@@ -18,7 +18,6 @@ namespace :updatedb do
       t.Make = x["make"]
       t.Model = x["model"]
       t.Color = x["color"]
-      t.Tow_From_Address = x["tow_from_address"].squish!
       t.Date = Date.strptime(x["date"], '%m%d%Y')
       t.Time = Time.strptime(x["date"]+x["time"], '%m%d%Y%H%M')
       t.geom = x["geom"]["longitude"] + "," + x["geom"]["latitude"] if x["geom"]
