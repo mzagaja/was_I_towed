@@ -23,7 +23,5 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: wasitowed_production
+  database: towedcarinfo
   pool: 5
-  username: rails
-  password: M?$wBobwniTw4d6PRTMvzzVH%U
