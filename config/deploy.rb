@@ -3,14 +3,13 @@ lock '3.3.5'
 
 set :application, 'was_i_towed'
 set :repo_url, 'git@github.com:mzagaja/was_I_towed.git'
-set :deploy_user, 'rails'
-set :rvm_ruby_version, '2.2.5@was_i_towed'
+set :deploy_user, 'towedcarinfo'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/rails/was_i_towed'
+set :deploy_to, '/var/www/towedcarinfo'
 
 # Default value for :scm is :git
 # set :scm, :git
