@@ -4,9 +4,9 @@
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-role :app, %w{rails@nathan-hale.zagaja.com}
-role :web, %w{rails@nathan-hale.zagaja.com}
-role :db,  %w{rails@nathan-hale.zagaja.com}
+role :app, %w{towedcarinfo@nathan-hale.zagaja.com}
+role :web, %w{towedcarinfo@nathan-hale.zagaja.com}
+role :db,  %w{towedcarinfo@nathan-hale.zagaja.com}
 
 
 # Extended Server Syntax
@@ -18,28 +18,6 @@ role :db,  %w{rails@nathan-hale.zagaja.com}
 # server 'nathan-hale.zagaja.com', user: 'rails', roles: %w{web app}, my_property: :my_value
 
 
-# Custom SSH Options
-# ==================
-# You may pass any option but keep in mind that net/ssh understands a
-# limited set of options, consult[net/ssh documentation](http://net-ssh.github.io/net-ssh/classes/Net/SSH.html#method-c-start).
-#
-# Global options
-# --------------
-#  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
-#
-# And/or per server (overrides global)
-# ------------------------------------
-# server 'example.com',
-#   user: 'user_name',
-#   roles: %w{web app},
-#   ssh_options: {
-#     user: 'user_name', # overrides user setting above
-#     keys: %w(/home/user_name/.ssh/id_rsa),
-#     forward_agent: false,
-#     auth_methods: %w(publickey password)
-#     # password: 'please use keys'
-#   }
+set :passenger_restart_command, 'passenger-config restart-app'
+set :rvm_custom_path, '/usr/share/rvm'
+set :rvm_ruby_version, '2.4.4'
